@@ -1,0 +1,306 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<title>demo</title>
+
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script src="js/china.js"></script>
+		<style type="text/css">
+			body {
+				background: url(images/img_zz/5.png);
+			}
+			
+			#first {
+				width: 370px;
+				height: 330px;
+				float: left;
+				margin-top: 3px;
+				margin-left: 9px;
+				margin-right: 5px;
+			}
+			
+			#second {
+				width: 370px;
+				height: 330px;
+				margin-top: 3px;
+				margin-left: 9px;
+				margin-right: 5px;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="swiper-container" id="Jswiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div id="first"></div>
+					<div id="second"></div>
+
+					<script type="text/x-javascript">
+						var second = document.getElementById("second");
+						var myChart = echarts.init(second);
+						var option = {
+							title: {
+								text: "某站点用户访问来源",
+								textStyle: {
+									color: "#ffffff",
+								},
+								subtext: "纯属虚构",
+								x: "center"
+							},
+							tooltip: {
+								trigger: "item",
+								textStyle: {
+									fontSize: 8
+								}
+							},
+							legend: {
+								orient: "vertical",
+								x: "left",
+								y: "center",
+								data: ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"],
+								textStyle: {
+									color: "rgb(255, 255, 255)",
+									fontSize: 8
+								}
+							},
+							toolbox: {
+								show: true,
+								feature: {
+									mark: {
+										show: true
+									},
+									dataView: {
+										show: true,
+										readOnly: true
+									},
+									restore: {
+										show: true
+									},
+									saveAsImage: {
+										show: true
+									}
+								},
+								textStyle: {
+									fontSize: 8
+								},
+								itemSize: 8
+							},
+							calculable: true,
+							series: [{
+								name: "访问来源",
+								type: "funnel",
+								x: "15%",
+								x2: "15%",
+								y2: "10%",
+								max: 100,
+								itemStyle: {
+									normal: {
+										labelLine: {
+											show: false
+										},
+										label: {
+											textStyle: {
+												fontSize: 8,
+												color: "rgb(255, 255, 255)"
+											}
+										}
+									},
+									emphasis: {
+										labelLine: {
+											show: false
+										}
+									}
+								},
+								data: [{
+										value: 80,
+										name: "直接访问"
+									},
+									{
+										value: 60,
+										name: "邮件营销"
+									},
+									{
+										value: 40,
+										name: "联盟广告"
+									},
+									{
+										value: 20,
+										name: "视频广告"
+									},
+									{
+										value: 100,
+										name: "搜索引擎"
+									}
+								]
+							}],
+						};
+						myChart.setOption(option);
+					</script>
+
+					<script type="text/javascript">
+						var first = document.getElementById("first");
+						var myChart = echarts.init(first);
+						var charts = [];
+
+						var option = {
+
+							title: {
+								text: "某站点用户访问来源",
+								textStyle: {
+									color: "#ffffff",
+								},
+								subtext: "纯属虚构",
+								x: "center"
+							},
+							tooltip: {
+								trigger: "item",
+								formatter: "{a} <br/>{b} : {c} ({d}%)",
+								textStyle: {
+									fontSize: 8
+								},
+								borderRadius: 4,
+								padding: 3
+							},
+							legend: {
+								orient: "vertical",
+								x: "left",
+								data: ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"],
+								textStyle: {
+									color: "rgb(255, 255, 255)",
+									fontSize: 8
+								},
+								padding: 0,
+								itemWidth: 17,
+								itemHeight: 15
+							},
+							toolbox: {
+								show: true,
+								feature: {
+									mark: {
+										show: true
+									},
+									dataView: {
+										show: true,
+										readOnly: true
+									},
+									restore: {
+										show: true
+									},
+									saveAsImage: {
+										show: true
+									}
+								},
+								itemSize: 11,
+								itemGap: 7
+							},
+							calculable: true,
+							series: [{
+								name: "访问来源",
+								type: "pie",
+								radius: "55%",
+								center: ["50%", "50%"],
+								labelLine: {
+									normal: {
+										length: 0
+									}
+								},
+								itemStyle: {
+									normal: {
+										label: {
+											show: true,
+											formatter: "{b}: {c} ({d}%)",
+											textStyle: {
+												fontSize: 8,
+												color: "#C4EAFC"
+											}
+										}
+									}
+								},
+								data: [{
+										value: 335,
+										name: "直接访问"
+									},
+									{
+										value: 310,
+										name: "邮件营销"
+									},
+									{
+										value: 234,
+										name: "联盟广告"
+									},
+									{
+										value: 135,
+										name: "视频广告"
+									},
+									{
+										value: 1548,
+										name: "搜索引擎"
+									}
+								],
+								tooltip: {
+									textStyle: {
+										fontSize: 8
+									}
+								}
+							}],
+
+						};
+
+						myChart.setOption(option);
+						charts.push(first);
+					</script>
+					<div class="page-1">
+						
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/img_zz/1.jpg" />
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/img_zz/2.jpg" />
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/img_zz/3.jpg" />
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/img_zz/4.jpg" />
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/img_zz/4.jpg" />
+				</div>
+
+			</div>
+			<img class="music_icon music_animate" src="images/music.png" onClick="music();">
+			<div style="display: none;">
+				<audio id="bg_audio" loop>
+					<source src="music/ZuiYiJiuDian.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+			<div class="swiper-arrow" style="display:none">
+				<span></span>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
+	</body>
+
+</html>

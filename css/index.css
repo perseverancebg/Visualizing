@@ -1,0 +1,173 @@
+body {
+	margin: 0;
+}
+
+.page-1 .p1-btn {
+	position: absolute;
+	width: 7.58rem;
+	height: 1.17rem;
+	background-color: #ff6c40;
+	text-align: center;
+	line-height: 1.17rem;
+	color: #fff;
+	left: 49%;
+	margin-left: -5rem;
+	bottom: 9%;
+	border-radius: 1.1rem;
+	font-size: 17px;
+	padding: 9px 22px;
+}
+
+@-webkit-keyframes moveIconUp {
+	0% {
+		-webkit-transform: translateY(100%) scale(1.2, 1.2);
+		opacity: 0
+	}
+	50% {
+		-webkit-transform: translateY(0%) scale(0.6, 0.6);
+		opacity: 1
+	}
+	100% {
+		-webkit-transform: translateY(-100%) scale(0.2, 0.2);
+		opacity: 0
+	}
+}
+
+body .swiper-slide:before{
+ content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 100%;
+    background-color: #8B8B8C;
+    box-shadow: 10px -1px 80px 20px #666;
+     -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(-100px) translateX(2px) translateY(80px);
+}
+
+body .swiper-slide:after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: #8B8B8C;
+     content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 100%;
+    background-color: #8B8B8C;
+}
+.swiper-arrow {
+	position: absolute;
+	width: 46px;
+	height: 25px;
+	z-index: 1;
+	left: 50%;
+	margin-left: -23px;
+	bottom: 15px;
+}
+
+.page-1 .swiper-arrow {
+	display: none
+}
+
+.swiper-arrow span {
+	background: url(../images/arrow.png) no-repeat center bottom;
+	background-size: contain;
+	width: 46px;
+	height: 25px;
+	display: block;
+	-webkit-animation: moveIconUp 1.5s ease infinite;
+	animation: moveIconUp 1.5s ease infinite
+}
+
+.music_icon {
+	position: absolute;
+	width: 6%;
+	top: 0;
+	right: -1%;
+	z-index: 999999;
+	padding: 2%;
+}
+
+.music_animate {
+	-webkit-animation: music_animate 2s .5s linear infinite both;
+}
+
+@-webkit-keyframes music_animate {
+	0% {
+		-webkit-transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(1turn)
+	}
+}
+
+.enzd {
+	animation: enzd .3s linear infinite;
+	-webkit-animation: enzd .3s linear infinite;
+}
+
+.enzdA {
+	animation: enzdA .6s linear infinite;
+	-webkit-animation: enzdA .6s linear infinite;
+}
+
+@keyframes enzd {
+	0% {
+		transform: scale(1)
+	}
+	50% {
+		transform: scale(1.1)
+	}
+	100% {
+		transform: scale(1)
+	}
+}
+
+@-webkit-keyframes enzd {
+	0% {
+		-webkit-transform: scale(1)
+	}
+	50% {
+		-webkit-transform: scale(1.1)
+	}
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes enzdA {
+	0% {
+		transform: scale(1)
+	}
+	50% {
+		transform: scale(.9)
+	}
+	100% {
+		transform: scale(1)
+	}
+}
+
+@-webkit-keyframes enzdA {
+	0% {
+		-webkit-transform: scale(1)
+	}
+	50% {
+		-webkit-transform: scale(.9)
+	}
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
