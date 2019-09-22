@@ -29,7 +29,6 @@ mySwiper.on('slideChangeTransitionEnd', function() {
 })
 
 option = {
-
 	series: [{
 		type: 'pie',
 		radius: ['30%', '70%'],
@@ -236,11 +235,11 @@ document.addEventListener("WeixinJSBridgeReady", function func() {
 function music() {
 	if (bg_audio.paused) {
 		$('.music_icon').addClass('music_animate');
-		$('.music_icon').attr('src', "images/music.png");
+		$('.music_icon').attr('src', "images/keji.png");
 		bg_audio.play();
 	} else {
 		$('.music_icon').removeClass('music_animate');
-		$('.music_icon').attr('src', "images/nomusic.png");
+		$('.music_icon').attr('src', "images/keji.png");
 		bg_audio.pause();
 	}
 }
